@@ -1,0 +1,6 @@
+@media (min-width:1500px) {
+  .sidenav {
+    position: fixed;
+    width: var(--sidenav-width-xl);
+  }
+}

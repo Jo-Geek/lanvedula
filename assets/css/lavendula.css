@@ -1,5 +1,188 @@
-:root{
-  --alpha: #6145E0;
-  --beta: #6F51FF;
-  --workspace: #F8F7FC;
+/* 
+** Lavendula.css
+** Author: Jones Joseph
+** Part of the lavedula tempalate: https://github.com/Jo-Geek/lanvedula.git
+*/
+
+:root {
+  --void: #988BFF;
+  --color: #5F45E1;
+  --color-light: #6F51FF;
+  --color-lighter: #7659FF;
+  --color-lightest: #988BFF;
+  --color-secondary: #de41a6;
+  --color-secondary-shadow: #de41a69c;
+  --color-secondary-hover: #d22895;
+  --color-tertiary: #287efb;
+  --color-tertiary-shadow: #287efb9c;
+  --color-tertiary-hover: #1a70ec;
+  --slimbar-width: 64px;
+  --sidenav-width-xl: 350px;
+  --sidenav-width: 300px;
+}
+
+body {
+  font: "Segoe ui";
+
+}
+
+.lavendula {
+  background-color: var(--void);
+  width: 100vw;
+  height: 100vh;
+}
+
+.slimbar {
+  position: fixed;
+  width: var(--slimbar-width);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color);
+  border-top-right-radius: 1.75rem;
+  border-bottom-right-radius: 1.75rem;
+  z-index: 3;
+  border-right: 1px solid var(--color-lightest);
+}
+
+.slimbar .brand-logo {
+  width: var(--slimbar-width);
+  padding: .75rem;
+  margin-top: 1.25rem;
+}
+
+.slimbar .brand-logo img {
+  width: 100%;
+}
+
+.slimbar-nav {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0 .75rem;
+}
+
+.slimbar-nav .nav-item {
+  display: flex;
+  height: calc(var(--slimbar-width) - 1.5rem);
+  color: white;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-secondary);
+  box-shadow: 0 .25rem .75rem 0 var(--color-secondary-shadow);
+}
+
+.slimbar-nav .nav-item:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.slimbar-nav .nav-item.nav-blue {
+  background-color: var(--color-tertiary);
+  box-shadow: 0 .25rem .75rem 0 var(--color-tertiary-shadow);
+}
+
+.slimbar-nav .nav-item.nav-blue:hover {
+  background-color: var(--color-tertiary-hover);
+}
+
+.slimbar-nav .nav-item.active {
+  position:relative;
+}
+
+.slimbar-nav .nav-item.active:before {
+  content:'';
+  width:5px;
+  position:absolute;
+  height:100%;
+  left:-.75rem;
+  top:0;
+  background-color:var(--color-lightest);
+  box-shadow:0.15rem 0 0.5rem 0 rgba(255,255,255,.3);
+}
+
+
+.slimbar-nav-footer {
+  position:absolute;
+  bottom: 1.25rem;
+  width: 100%;
+  padding: 0 .75rem;
+}
+
+.slimbar-nav-footer .nav-item {
+  display: flex;
+  height: calc(var(--slimbar-width) - 1.5rem);
+  color: var(--color-lightest);
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.slimbar-nav-footer .nav-item:hover {
+  background-color: rgba(0,0,0,0.2);
+  color:white;
+}
+
+
+.sidenav {
+  position: fixed;
+  width: var(--sidenav-width);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--color-light);
+  border-radius: 1.5rem;
+  z-index: 2;
+  overflow: hidden;
+  padding-left: var(--slimbar-width);
+  box-shadow:0.1rem 0 1.5rem 0 var(--color-lightest);
+}
+
+.sidenav:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--sidenav-width);
+  height: var(--sidenav-width);
+  background-color: var(--color-lighter);
+  border-radius: 100%;
+  transform: translateY(-25%) translateX(-5%);
+  z-index: -1;
+}
+
+.sidenav:after {
+  content: '';
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-lighter);
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.sidenav .brand-text {
+  margin: 2rem .5rem;
+  padding: 0.5rem .75rem;
+  color: white;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  border-radius: 5rem;
+  font-weight:500;
+}
+
+.workspace {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 1rem;
+  background-color: white;
+  z-index: 1;
+  border-radius: 1.75rem;
+  box-shadow:0.1rem 0 0.5rem 0.05rem rgba(0,0,0,0.2);
+  min-width:1200px;
 }
