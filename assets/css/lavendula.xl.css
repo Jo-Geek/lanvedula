@@ -1,6 +1,13 @@
+/* 
+** Lavendula.xl.css
+** //media queries for larger screens
+** Author: Jones Joseph
+** Part of the lavendula tempalate: https://github.com/Jo-Geek/lanvedula.git
+*/
+
 @media (min-width:1500px) {
-  .sidenav {
+  .sidebar {
     position: fixed;
-    width: var(--sidenav-width-xl);
+    width: var(--sidebar-width-xl);
   }
 }

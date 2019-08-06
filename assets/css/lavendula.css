@@ -1,7 +1,7 @@
 /* 
 ** Lavendula.css
 ** Author: Jones Joseph
-** Part of the lavedula tempalate: https://github.com/Jo-Geek/lanvedula.git
+** Part of the lavendula tempalate: https://github.com/Jo-Geek/lanvedula.git
 */
 
 :root {
@@ -17,13 +17,12 @@
   --color-tertiary-shadow: #287efb9c;
   --color-tertiary-hover: #1a70ec;
   --slimbar-width: 64px;
-  --sidenav-width-xl: 350px;
-  --sidenav-width: 300px;
+  --sidebar-width-xl: 350px;
+  --sidebar-width: 300px;
 }
 
 body {
   font: "Segoe ui";
-
 }
 
 .lavendula {
@@ -87,23 +86,22 @@ body {
 }
 
 .slimbar-nav .nav-item.active {
-  position:relative;
+  position: relative;
 }
 
 .slimbar-nav .nav-item.active:before {
-  content:'';
-  width:5px;
-  position:absolute;
-  height:100%;
-  left:-.75rem;
-  top:0;
-  background-color:var(--color-lightest);
-  box-shadow:0.15rem 0 0.5rem 0 rgba(255,255,255,.3);
+  content: '';
+  width: 5px;
+  position: absolute;
+  height: 100%;
+  left: -.75rem;
+  top: 0;
+  background-color: var(--color-lightest);
+  box-shadow: 0.15rem 0 0.5rem 0 rgba(255, 255, 255, .3);
 }
 
-
 .slimbar-nav-footer {
-  position:absolute;
+  position: absolute;
   bottom: 1.25rem;
   width: 100%;
   padding: 0 .75rem;
@@ -120,14 +118,13 @@ body {
 }
 
 .slimbar-nav-footer .nav-item:hover {
-  background-color: rgba(0,0,0,0.2);
-  color:white;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
-
-.sidenav {
+.sidebar {
   position: fixed;
-  width: var(--sidenav-width);
+  width: var(--sidebar-width);
   left: 0;
   top: 0;
   bottom: 0;
@@ -136,23 +133,24 @@ body {
   z-index: 2;
   overflow: hidden;
   padding-left: var(--slimbar-width);
-  box-shadow:0.1rem 0 1.5rem 0 var(--color-lightest);
+  /* Cannot use shadow since the active nav item needs to blend in with the workspace */
+  /* box-shadow:0.1rem 0 1.5rem 0 var(--color-lightest); */
 }
 
-.sidenav:before {
+.sidebar:before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: var(--sidenav-width);
-  height: var(--sidenav-width);
+  width: var(--sidebar-width);
+  height: var(--sidebar-width);
   background-color: var(--color-lighter);
   border-radius: 100%;
   transform: translateY(-25%) translateX(-5%);
   z-index: -1;
 }
 
-.sidenav:after {
+.sidebar:after {
   content: '';
   position: absolute;
   top: 70%;
@@ -164,14 +162,68 @@ body {
   z-index: -1;
 }
 
-.sidenav .brand-text {
+.sidebar .brand-text {
   margin: 2rem .5rem;
   padding: 0.5rem .75rem;
   color: white;
   font-size: 1.05rem;
   letter-spacing: 1px;
   border-radius: 5rem;
-  font-weight:500;
+  font-weight: 500;
+}
+
+.sidebar-nav {
+  margin-top: 2.25rem;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.sidebar-nav .nav-item {
+  display: block;
+  color: var(--light);
+  padding: .5rem;
+  padding-left: 1rem;
+border-radius:10rem;
+margin-right:1rem;
+}
+
+.sidebar-nav .nav-item:hover {
+  color: white;
+  text-decoration: none;
+  background-color: var(--color);
+}
+
+.sidebar-nav .nav-item.active {
+  position:relative;
+  background-color: white;
+  color:var(--color);
+  border-radius:0;
+    border-top-left-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  margin-right:0;
+}
+
+.sidebar-nav .nav-item.active:before {
+  content:'';
+  position:absolute;
+  height:2rem;
+  width:2rem;
+  right:0;
+  bottom:100%;
+  background-image: url(../img/template/nav_active_curve.png);
+  background-size: 100%;
+}
+
+.sidebar-nav .nav-item.active:after {
+  content:'';
+  position:absolute;
+  height:2rem;
+  width:2rem;
+  right:0;
+  top:100%;
+  background-image: url(../img/template/nav_active_curve.png);
+  background-size: 100%;
+  transform:scaleY(-1);
 }
 
 .workspace {
@@ -183,6 +235,6 @@ body {
   background-color: white;
   z-index: 1;
   border-radius: 1.75rem;
-  box-shadow:0.1rem 0 0.5rem 0.05rem rgba(0,0,0,0.2);
-  min-width:1200px;
+  box-shadow: 0.1rem 0 0.5rem 0.05rem rgba(0, 0, 0, 0.2);
+  min-width: 1200px;
 }
