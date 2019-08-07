@@ -32,8 +32,17 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+  <!-- Chert js -->
+  <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> -->
+
+
   <script src="assets/js/lavendula.core.js"></script>
   <script src="assets/js/lavendula.js"></script>
+
+  <!-- View respective script -->
+  <script src="assets/js/views/index.js"></script>
 
 </head>
 
@@ -61,23 +70,126 @@
         Expert Solution Tech.
       </div>
       <nav class="sidebar-nav">
-        <a class="nav-item" href="#" >
+        <a class="nav-item active" href="#">
           <i class="fas fa-home fa-fw mr-3"></i>Home
         </a>
-        <a class="nav-item active" href="#">
-          <i class="fas fa-users fa-fw mr-3"></i>Subscribers
+        <a class="nav-item" href="#">
+          <i class="far fa-calendar-check fa-fw mr-3"></i>Subscribers
+        </a>
+
+        <a class="nav-item" href="#">
+          <i class="fas fa-shopping-basket fa-fw mr-3"></i>Expenses
+        </a>
+
+        <a class="nav-item" href="#">
+          <i class="fas fa-user-plus fa-fw mr-3"></i>Additionals
+        </a>
+
+        <a class="nav-item" href="#">
+          <i class="fas fa-file-invoice fa-fw mr-3"></i>Billing
         </a>
         <a class="nav-item" href="#">
-          <i class="fas fa-file-invoice-dollar fa-fw mr-3"></i>Expenses
-        </a>
-        <a class="nav-item" href="#">
-          <i class="fas fa-receipt fa-fw mr-3"></i>Billing
+          <i class="fas fa-users fa-fw mr-3"></i>People
         </a>
 
 
       </nav>
     </div>
-    <div class="workspace"></div>
+    <div class="content">
+      <div class="container">
+        <header>
+          <div class="d-flex">
+            <div class="flex-fill d-flex">
+              <button class="btn btn-light rounded-pill mr-3 text-muted border" data-toggle="tooltip" title="Go Back"><i
+                  class="fas fa-arrow-left"></i></button>
+
+              <input class="form-control rounded-pill px-4 shadow-sm border-0" placeholder="Search here" />
+            </div>
+            <div class="flex-fill text-right">
+              <div class="dropdown d-inline-block mr-3">
+                <button class="btn btn-secondary rounded-pill px-4 shadow " data-toggle="dropdown"><i
+                    class="fas fa-plus mr-2"></i>Add</button>
+                <div class="dropdown-menu rounded shadow border-0 dropdown-menu-right mt-2">
+                  <a class="dropdown-item" href="#">Expense</a>
+                  <a class="dropdown-item" href="#">Subscriber</a>
+                  <a class="dropdown-item" href="#">Person</a>
+
+                </div>
+              </div>
+
+              <button class="btn btn-primary rounded-pill px-4 shadow ">Generate Bill</button>
+            </div>
+          </div>
+        </header>
+        <main class="mt-4 pt-1">
+          
+          <h5 class="text-muted mb-4">Monthly Summary <button class="btn btn-light ml-3 rounded-pill px-4 btn-sm  bg-white">For August, 2019</button></h5>
+          <div class="row row-metrics">
+            <div class="col-sm-6 col-lg-3">
+              <div class="card mb-4 border-0">
+                <div class="card-body pt-2 pb-0">
+                  <div>
+                    <strong>Bill/head</strong>
+                    <h3 class="font-weight-normal mb-0">₹ 432</h3>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="metric-chart-container">
+                    <canvas id="chartBillperHead" style="display: block;height: 50px;"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card mb-4 border-0">
+                    <div class="card-body pt-2 pb-0">
+                      <div>
+                        <strong>Expenses</strong>
+                        <h3 class="font-weight-normal mb-0">₹ 5,432</h3>
+                      </div>
+                    </div>
+                    <div class="card-body p-0">
+                      <div class="metric-chart-container">
+                        <canvas id="chartExpenses" style="display: block;height: 50px;"></canvas>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card mb-4 border-0">
+                    <div class="card-body pt-2 pb-0">
+                      <div>
+                        <strong>Subscribers</strong>
+                        <h3 class="font-weight-normal mb-0">5</h3>
+                      </div>
+                    </div>
+                    <div class="card-body p-0">
+                      <div class="metric-chart-container">
+                        <canvas id="chartSubscribers" style="display: block;height: 50px;"></canvas>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <div class="card mb-4 border-0">
+                    <div class="card-body pt-2 pb-0">
+                      <div>
+                        <strong>Additionals</strong>
+                        <h3 class="font-weight-normal mb-0">5</h3>
+                      </div>
+                    </div>
+                    <div class="card-body p-0">
+                      <div class="metric-chart-container">
+                        <canvas id="chartAdditionals" style="display: block;height: 50px;"></canvas>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
   </div>
 
 </body>
