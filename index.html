@@ -121,9 +121,10 @@
             </div>
           </div>
         </header>
-        <main class="mt-4 pt-1">
-          
-          <h5 class="text-muted mb-4">Monthly Summary <button class="btn btn-light ml-3 rounded-pill px-4 btn-sm  bg-white">For August, 2019</button></h5>
+        <main class="">
+
+          <h5 class="text-muted mb-3">Monthly Summary <button
+              class="btn btn-light ml-3 rounded-pill px-4 btn-sm  bg-white">For August, 2019</button></h5>
           <div class="row row-metrics">
             <div class="col-sm-6 col-lg-3">
               <div class="card mb-4 border-0">
@@ -141,52 +142,287 @@
               </div>
             </div>
             <div class="col-sm-6 col-lg-3">
-                <div class="card mb-4 border-0">
-                    <div class="card-body pt-2 pb-0">
-                      <div>
-                        <strong>Expenses</strong>
-                        <h3 class="font-weight-normal mb-0">₹ 5,432</h3>
-                      </div>
-                    </div>
-                    <div class="card-body p-0">
-                      <div class="metric-chart-container">
-                        <canvas id="chartExpenses" style="display: block;height: 50px;"></canvas>
-                      </div>
-                    </div>
+              <div class="card mb-4 border-0">
+                <div class="card-body pt-2 pb-0">
+                  <div>
+                    <strong>Expenses</strong>
+                    <h3 class="font-weight-normal mb-0">₹ 5,432</h3>
                   </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="metric-chart-container">
+                    <canvas id="chartExpenses" style="display: block;height: 50px;"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-sm-6 col-lg-3">
-                <div class="card mb-4 border-0">
-                    <div class="card-body pt-2 pb-0">
-                      <div>
-                        <strong>Subscribers</strong>
-                        <h3 class="font-weight-normal mb-0">5</h3>
-                      </div>
-                    </div>
-                    <div class="card-body p-0">
-                      <div class="metric-chart-container">
-                        <canvas id="chartSubscribers" style="display: block;height: 50px;"></canvas>
-                      </div>
-                    </div>
+              <div class="card mb-4 border-0">
+                <div class="card-body pt-2 pb-0">
+                  <div>
+                    <strong>Subscribers</strong>
+                    <h3 class="font-weight-normal mb-0">5</h3>
                   </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="metric-chart-container">
+                    <canvas id="chartSubscribers" style="display: block;height: 50px;"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-sm-6 col-lg-3">
-                <div class="card mb-4 border-0">
-                    <div class="card-body pt-2 pb-0">
-                      <div>
-                        <strong>Additionals</strong>
-                        <h3 class="font-weight-normal mb-0">5</h3>
-                      </div>
-                    </div>
-                    <div class="card-body p-0">
-                      <div class="metric-chart-container">
-                        <canvas id="chartAdditionals" style="display: block;height: 50px;"></canvas>
-                      </div>
-                    </div>
+              <div class="card mb-4 border-0">
+                <div class="card-body pt-2 pb-0">
+                  <div>
+                    <strong>Additionals</strong>
+                    <h3 class="font-weight-normal mb-0">6</h3>
                   </div>
+                </div>
+                <div class="card-body p-0">
+                  <div class="metric-chart-container">
+                    <canvas id="chartAdditionals" style="display: block;height: 50px;"></canvas>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
+
+          <div class="row pt-2">
+            <div class="col-lg-4">
+              <div class="py-2 px-3">
+                <h5 class="text-muted mb-0 font-weight-normal">
+                  <i class="fas fa-shopping-basket mr-2 text-primary"></i>
+                  <span class="text-gradient">Expenses</span>
+                </h5>
+              </div>
+              <div class="card border-light shadow mb-4 rounded overflow-hidden">
+                <div class="card-body pt-0 px-0" style="height:20rem; overflow-y:auto">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Purchase from store
+                          <small class="text-muted d-block">23 August, 2019</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 1,235</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Travel
+                          <small class="text-muted d-block">20 August, 2019</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 235</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Items brought
+                          <small class="text-muted d-block">12 August, 2019</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 2,000</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Labour wages
+                          <small class="text-muted d-block">30 August, 2019</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 4,500</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Purchase from store
+                          <small class="text-muted d-block">13 August, 2019</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 1,235</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+
+              <div class="py-2 px-3">
+                <h5 class="text-muted mb-0 font-weight-normal">
+                  <i class="fas fa-calendar-check mr-2 text-primary"></i>
+                  <span class="text-gradient">Subscribers</span>
+                </h5>
+              </div>
+
+              <div class="card border-light shadow mb-4 rounded overflow-hidden">
+
+                <div class="card-body pt-0 px-0" style="height:20rem; overflow-y:auto">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Mathew Holland
+                          <small class="text-muted d-block font-italic">mathew.h@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right">
+                          <button class="btn btn-sm btn-light rounded-pill d-none" data-toggle="tooltip"
+                            title="Mark as paid">
+                            <i class="fas fa-check text-lighter"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Patrick Richard
+                          <small class="text-muted d-block font-italic">patrick.r@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <button class="btn btn-sm btn-light rounded-pill d-none" data-toggle="tooltip"
+                            title="UnMark as paid">
+                            <i class="fas fa-check text-success"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Andria Newman
+                          <small class="text-muted d-block font-italic">andria.n@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <button class="btn btn-sm btn-light rounded-pill d-none" data-toggle="tooltip"
+                            title="Mark as paid">
+                            <i class="fas fa-check text-lighter"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Jonah Kyre
+                          <small class="text-muted d-block font-italic">jonah.k@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <button class="btn btn-sm btn-light rounded-pill d-none" data-toggle="tooltip"
+                            title="Mark as paid">
+                            <i class="fas fa-check text-lighter"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Dolan Periera
+                          <small class="text-muted d-block font-italic">dalan.p@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <button class="btn btn-sm btn-light rounded-pill d-none" data-toggle="tooltip"
+                            title="UnMark as paid">
+                            <i class="fas fa-check text-success"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+
+              <div class="py-2 px-3">
+                <h5 class="text-muted mb-0 font-weight-normal">
+                  <i class="fas fa-user-plus mr-2 text-primary"></i>
+                  <span class="text-gradient">Additionals</span>
+                </h5>
+              </div>
+
+              <div class="card border-light shadow mb-4 rounded overflow-hidden">
+
+                <div class="card-body pt-0 px-0" style="height:20rem; overflow-y:auto">
+                  <div class="list-group list-group-flush">
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          John Newman
+                          <small class="text-muted d-block font-italic">john.n@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 100</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Sandra Merlin
+                          <small class="text-muted d-block font-italic">sandra.m@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 200</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          Lukas Trench
+                          <small class="text-muted d-block font-italic">lukas.t@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 50</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                        <div class="flex-fill">
+                          George Jones
+                          <small class="text-muted d-block font-italic">jones.g@gmail.com</small>
+                        </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 70</h6>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="list-group-item border-light py-2">
+                      <div class="d-flex align-items-center">
+                          <div class="flex-fill">
+                              Lunda Daisy
+                              <small class="text-muted d-block font-italic">lynda.d@gmail.com</small>
+                            </div>
+                        <div class="flex-fill text-right text-secondary">
+                          <h6 class="font-weight-normal">₹ 125</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </main>
       </div>
     </div>

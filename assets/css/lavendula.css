@@ -250,9 +250,10 @@ body {
 }
 
 .content main {
-    min-height: calc(100vh - 80px);
-    overflow-y: auto;
-    padding:1.5rem;
+  height: calc(100vh - 116px);
+  overflow-y: auto;
+  padding:0 1.5rem;
+  margin-top: 1rem;
 }
 
 .row-metrics .card {
@@ -370,4 +371,20 @@ body {
 
 .rounded {
   border-radius: .5rem !important;
+}
+
+.text-color-lightest{
+  color:var(--color-lightest) !important;
+}
+
+.text-lighter{
+  color:#eee;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #2680EB 0%, #FB799E 100%);
+  font-weight: normal;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
