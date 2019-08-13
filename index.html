@@ -6,23 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Lavendula</title>
 
-  <!-- Bootstrap 4.3.1 CSS-->
+  <!-- Bootstrap 4.3.1 CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Simple scroll bar from: https://github.com/Grsmto/simplebar -->
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 
 
   <!-- Lavendula css files -->
   <link rel="stylesheet" href="assets/css/lavendula.css" />
   <link rel="stylesheet" href="assets/css/lavendula.xl.css" />
 
-  <!-- Font Awesome Kit (Loads latest automatically)-->
+  <!-- Font Awesome Kit (Loads latest automatically) | But dead slow (dont know why) -->
   <script src="https://kit.fontawesome.com/6ad5134c9c.js"></script>
 
   <!-- jQuery 3.3.1 -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-  <!-- Popper 1.14.7 (Bootstrap 4 requires this to work)-->
+  <!-- Popper 1.14.7 (Bootstrap 4 requires this to work) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -32,12 +35,15 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-  <!-- Chert js -->
+  <!-- Chart js -->
   <script src="https://www.chartjs.org/samples/latest/utils.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> -->
 
+  <!-- Simple scroll bar from: https://github.com/Grsmto/simplebar -->
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 
+  <!-- Lavendula JS files -->
   <script src="assets/js/lavendula.core.js"></script>
   <script src="assets/js/lavendula.js"></script>
 
@@ -121,7 +127,7 @@
             </div>
           </div>
         </header>
-        <main class="">
+        <main class="" data-simplebar>
 
           <h5 class="text-muted mb-3">Monthly Summary <button
               class="btn btn-light ml-3 rounded-pill px-4 btn-sm  bg-white">For August, 2019</button></h5>
@@ -190,10 +196,47 @@
           </div>
 
           <div class="row pt-2">
+              <div class="col-lg-6">
+                <div class="py-2 px-3">
+                  <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                    <small><i class="fas fa-chart-line text-primary mr-2"></i></small>
+                    <span class="text-gradient">Expense Trend</span>
+                  </h5>
+                </div>
+                <div class="card border-light mb-4 rounded overflow-hidden">
+                  <div class="card-body">
+                    <div class="w-100">
+                      <canvas id="chartExpenseTrend" height="200"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="py-2 px-3">
+                  <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                    <small><i class="fas fa-chart-line text-primary mr-2"></i></small>
+                    <span class="text-gradient">Subscriber Trend</span>
+                  </h5>
+                </div>
+                <div class="card border-light mb-4 rounded overflow-hidden">
+                  <div class="card-body">
+                    <div class="w-100">
+                      <canvas id="chartSubscriberTrend" height="200"></canvas>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+
+            
+
+          <div class="row pt-2">
             <div class="col-lg-4">
               <div class="py-2 px-3">
-                <h5 class="text-muted mb-0 font-weight-normal">
-                  <i class="fas fa-shopping-basket mr-2 text-primary"></i>
+                <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                  <small>
+                    <i class="fas fa-shopping-basket mr-2 text-primary"></i></small>
                   <span class="text-gradient">Expenses</span>
                 </h5>
               </div>
@@ -263,8 +306,9 @@
             <div class="col-lg-4">
 
               <div class="py-2 px-3">
-                <h5 class="text-muted mb-0 font-weight-normal">
-                  <i class="fas fa-calendar-check mr-2 text-primary"></i>
+                <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                  <small>
+                    <i class="fas fa-calendar-check mr-2 text-primary"></i></small>
                   <span class="text-gradient">Subscribers</span>
                 </h5>
               </div>
@@ -351,8 +395,9 @@
             <div class="col-lg-4">
 
               <div class="py-2 px-3">
-                <h5 class="text-muted mb-0 font-weight-normal">
-                  <i class="fas fa-user-plus mr-2 text-primary"></i>
+                <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                  <small>
+                    <i class="fas fa-user-plus mr-2 text-primary"></i></small>
                   <span class="text-gradient">Additionals</span>
                 </h5>
               </div>
@@ -407,10 +452,10 @@
                     </div>
                     <div class="list-group-item border-light py-2">
                       <div class="d-flex align-items-center">
-                          <div class="flex-fill">
-                              Lunda Daisy
-                              <small class="text-muted d-block font-italic">lynda.d@gmail.com</small>
-                            </div>
+                        <div class="flex-fill">
+                          Lunda Daisy
+                          <small class="text-muted d-block font-italic">lynda.d@gmail.com</small>
+                        </div>
                         <div class="flex-fill text-right text-secondary">
                           <h6 class="font-weight-normal">₹ 125</h6>
                         </div>
@@ -423,6 +468,8 @@
 
           </div>
 
+
+    
         </main>
       </div>
     </div>
