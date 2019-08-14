@@ -76,10 +76,10 @@
         Expert Solution Tech.
       </div>
       <nav class="sidebar-nav">
-        <a class="nav-item active" href="#">
+        <a class="nav-item" href="index.html">
           <i class="fas fa-home fa-fw mr-3"></i>Home
         </a>
-        <a class="nav-item" href="subscribers.html">
+        <a class="nav-item active" href="#">
           <i class="far fa-calendar-check fa-fw mr-3"></i>Subscribers
         </a>
 
@@ -108,20 +108,37 @@
             <div class="flex-fill d-flex">
               <button class="btn btn-light rounded-pill mr-3 text-muted border" data-toggle="tooltip" title="Go Back"><i
                   class="fas fa-arrow-left"></i></button>
-
-              <input class="form-control rounded-pill px-4 shadow-sm border-0" placeholder="Search here" />
-            </div>
-            <div class="flex-fill text-right">
-              <div class="dropdown d-inline-block mr-3">
-                <button class="btn btn-secondary rounded-pill px-4 shadow " data-toggle="dropdown"><i
-                    class="fas fa-plus mr-2"></i>Add</button>
-                <div class="dropdown-menu rounded shadow border-0 dropdown-menu-right mt-2">
-                  <a class="dropdown-item" href="#">Expense</a>
-                  <a class="dropdown-item" href="#">Subscriber</a>
-                  <a class="dropdown-item" href="#">Person</a>
-
+              <div class="input-group rounded-pill border-0 shadow-sm overflow-hidden">
+                <div class="input-group-prepend">
+                  <span class="input-group-text bg-white border-0 px-4">Select Period</span>
+                </div>
+                <select class="custom-select bg-white border-top-0 border-bottom-0">
+                  <option value="Jan">Jan</option>
+                  <option value="Feb">Feb</option>
+                  <option value="Mar">Mar</option>
+                  <option value="Apr">Apr</option>
+                  <option value="May">May</option>
+                  <option value="Jun">Jun</option>
+                  <option value="Jul">Jul</option>
+                  <option value="Aug">Aug</option>
+                  <option value="Sep">Sep</option>
+                  <option value="Nov">Nov</option>
+                  <option value="Dec">Dec</option>
+                </select>
+                <select class="custom-select bg-white border-0">
+                  <option value="2019">2019</option>
+                  <option value="2018">2018</option>
+                </select>
+                <div class="input-group-append bg-white">
+                  <button class="btn btn-success rounded-pill btn-sm my-1 mr-2 btn-sm" type="button" data-toggle="tooltip" title="Apply filter" data-placement="bottom"><i class="fas fa-check"></i></button>
                 </div>
               </div>
+              <!-- <input class="form-control rounded-pill px-4 shadow-sm border-0" placeholder="Search here" /> -->
+            </div>
+            <div class="flex-fill text-right">
+
+              <button class="btn btn-secondary rounded-pill px-4 shadow mr-3" data-toggle="dropdown"><i
+                  class="fas fa-plus mr-2"></i>Add Subscriber</button>
 
               <button class="btn btn-primary rounded-pill px-4 shadow ">Generate Bill</button>
             </div>
@@ -196,40 +213,40 @@
           </div>
 
           <div class="row pt-2">
-              <div class="col-lg-6">
-                <div class="py-2 px-3">
-                  <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
-                    <small><i class="fas fa-chart-line text-primary mr-2"></i></small>
-                    <span class="text-gradient">Expense Trend</span>
-                  </h5>
-                </div>
-                <div class="card border-light mb-4 rounded overflow-hidden">
-                  <div class="card-body">
-                    <div class="w-100">
-                      <canvas id="chartExpenseTrend" height="200"></canvas>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-lg-6">
+              <div class="py-2 px-3">
+                <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                  <small><i class="fas fa-chart-line text-primary mr-2"></i></small>
+                  <span class="text-gradient">Expense Trend</span>
+                </h5>
               </div>
-              <div class="col-lg-6">
-                <div class="py-2 px-3">
-                  <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
-                    <small><i class="fas fa-chart-line text-primary mr-2"></i></small>
-                    <span class="text-gradient">Subscriber Trend</span>
-                  </h5>
-                </div>
-                <div class="card border-light mb-4 rounded overflow-hidden">
-                  <div class="card-body">
-                    <div class="w-100">
-                      <canvas id="chartSubscriberTrend" height="200"></canvas>
-                    </div>
+              <div class="card border-light mb-4 rounded overflow-hidden">
+                <div class="card-body">
+                  <div class="w-100">
+                    <canvas id="chartExpenseTrend" height="200"></canvas>
                   </div>
                 </div>
-  
               </div>
             </div>
+            <div class="col-lg-6">
+              <div class="py-2 px-3">
+                <h5 class="text-muted mb-0 font-weight-normal d-flex align-items-center">
+                  <small><i class="fas fa-chart-line text-primary mr-2"></i></small>
+                  <span class="text-gradient">Subscriber Trend</span>
+                </h5>
+              </div>
+              <div class="card border-light mb-4 rounded overflow-hidden">
+                <div class="card-body">
+                  <div class="w-100">
+                    <canvas id="chartSubscriberTrend" height="200"></canvas>
+                  </div>
+                </div>
+              </div>
 
-            
+            </div>
+          </div>
+
+
 
           <div class="row pt-2">
             <div class="col-lg-4">
@@ -469,7 +486,7 @@
           </div>
 
 
-    
+
         </main>
       </div>
     </div>
